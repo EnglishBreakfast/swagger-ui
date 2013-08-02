@@ -7,7 +7,14 @@
 
 <div class="signature-container">
     <div class="description">
-        {{{signature}}}
+      <table class="fullwidth">
+        {{#each properties}}
+          <tr>
+              <td class="code"><p>{{name}}</p></td>
+              <td><p>{{descr}}</p></td>
+          </tr>
+        {{/each}}
+      </table>
     </div>
 
     <div class="snippet">

@@ -18,11 +18,11 @@
             </div>
             <div class='content' id='{{resourceName}}_{{nickname}}_{{httpMethod}}_{{number}}_content' style='display:none'>
                 {{#if notes}}
-                <h4>Implementation Notes</h4>
-                <p>{{{notes}}}</p>
+                <h1>Overview</h1>
+                {{{notes}}}
                 {{/if}}
                 {{#if responseClass}}
-                    <h4>Response Class</h4>
+                    <h4>Resource Fields</h4>
                     <p><span class="model-signature" /></p>
                     <br/>
                     <div class="content-type" />
