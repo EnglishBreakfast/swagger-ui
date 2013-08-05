@@ -21,6 +21,10 @@ class OperationView extends Backbone.View
 
     $(@el).html(Handlebars.templates.operation(@model))
 
+    for prop in @model.resource.models[@model.resourceName].properties
+      if prop.descr
+        prop.descr = converter.makeHtml prop.descr
+
     responseSignatureView = new SignatureView(
       model: @model.resource.models[@model.resourceName],
       tagName: 'div',

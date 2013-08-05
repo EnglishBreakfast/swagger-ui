@@ -8,10 +8,18 @@
 <div class="signature-container">
     <div class="description">
       <table class="fullwidth">
+        <thead>
+        <tr>
+            <th>Property</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+        </thead>
         {{#each properties}}
           <tr>
               <td class="code"><p>{{name}}</p></td>
-              <td><p>{{descr}}</p></td>
+              <td class="code"><p>{{dataType}}</p></td>
+              <td><p>{{{descr}}}</p></td>
           </tr>
         {{/each}}
       </table>
