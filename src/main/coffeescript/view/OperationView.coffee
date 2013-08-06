@@ -12,23 +12,11 @@ class OperationView extends Backbone.View
     isMethodSubmissionSupported = jQuery.inArray(@model.httpMethod, @model.supportedSubmitMethods()) >= 0
     @model.isReadOnly = true unless isMethodSubmissionSupported
 
-    converter = new Markdown.Converter()
-    if @model.notes
-      console.log @model.notes
-      @model.notes = converter.makeHtml @model.notes
-    else
-      console.log 'hello'
-
     $(@el).html(Handlebars.templates.operation(@model))
-
-    for prop in @model.resource.models[@model.resourceName].properties
-      if prop.descr
-        prop.descr = converter.makeHtml prop.descr
 
     responseSignatureView = new SignatureView(
       model: @model.resource.models[@model.resourceName],
       tagName: 'div',
-      converter: converter
     )
     $('.model-signature', $(@el)).append responseSignatureView.render().el
 
