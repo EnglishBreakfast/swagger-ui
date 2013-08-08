@@ -198,7 +198,6 @@
       this.api = api;
       this.path = this.api.resourcePath != null ? this.api.resourcePath : resourceObj.path;
       this.description = resourceObj.description;
-      console.log(resourceObj)
       parts = this.path.split("/");
       this.name = parts[parts.length - 1].replace('.{format}', '');
       this.basePath = this.api.basePath;
@@ -387,7 +386,9 @@
       this.dataType = obj.type;
       this.isCollection = this.dataType && (this.dataType.toLowerCase() === 'array' || this.dataType.toLowerCase() === 'list' || this.dataType.toLowerCase() === 'set');
       this.descr = obj.description;
+      this.readonly = obj.readonly;
       this.required = obj.required;
+
       if (obj.items != null) {
         if (obj.items.type != null) {
           this.refDataType = obj.items.type;

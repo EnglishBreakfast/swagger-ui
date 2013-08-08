@@ -12,6 +12,7 @@
         <tr>
             <th>Property</th>
             <th>Type</th>
+            <th>Read-write access</th>
             <th>Required</th>
             <th>Description</th>
         </tr>
@@ -20,7 +21,8 @@
           <tr>
               <td class="code"><p>{{name}}</p></td>
               <td class="code"><p>{{dataType}}</p></td>
-              <td class="code"><p>{{#required}}true{{/required}}{{^required}}false{{/required}}</p></td>
+              <td class="code"><p>{{#readonly}}read-only{{/readonly}}{{^readonly}}read/write{{/readonly}}</p></td>
+              <td class="code"><p>{{#required}}required{{/required}}{{^required}}optional{{/required}}</p></td>
               <td><p>{{{descr}}}</p></td>
           </tr>
         {{/each}}
