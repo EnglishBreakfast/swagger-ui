@@ -9,6 +9,7 @@ class MainView extends Backbone.View
     @addResource resource for resource in @model.apisArray
 
     # Render api overview
+    console.log @model.overview
     @addOverview @model.overview
 
   addResource: (resource) ->
