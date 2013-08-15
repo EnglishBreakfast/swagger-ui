@@ -1290,7 +1290,6 @@ templates['status_code'] = template(function (Handlebars,depth0,helpers,partials
         resource = _ref[_i];
         this.addResource(resource);
       }
-      console.log(this.model.overview);
       return this.addOverview(this.model.overview);
     };
 
@@ -1312,8 +1311,7 @@ templates['status_code'] = template(function (Handlebars,depth0,helpers,partials
         tagName: 'div',
         id: 'overview'
       });
-      $('#overview').append(overviewView.render().el);
-      return console.log(overviewView.render().el);
+      return $('#overview').append(overviewView.render().el);
     };
 
     MainView.prototype.clear = function() {

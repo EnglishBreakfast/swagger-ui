@@ -9,7 +9,6 @@ class MainView extends Backbone.View
     @addResource resource for resource in @model.apisArray
 
     # Render api overview
-    console.log @model.overview
     @addOverview @model.overview
 
   addResource: (resource) ->
@@ -21,7 +20,6 @@ class MainView extends Backbone.View
     # Render a resource and add it to resources li
     overviewView = new OverviewView({model: overview, tagName: 'div', id: 'overview'})
     $('#overview').append overviewView.render().el
-    console.log overviewView.render().el
 
   clear: ->
     $(@el).html ''
